@@ -1,0 +1,37 @@
+i.material-icons {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+/* Parameter section */
+.parameter-row, .parameter-input {
+	margin: 0 !important;
+}
+	.parameter-row .input-field {
+		margin-top: 0 !important;
+	}
+	.parameter-row input[type=text] {
+		border-color: #fff;
+	}
+
+/* Input customization */
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #fff !important;
+	box-shadow: 0 1px 0 0 #fff !important;
+}
+
+.input-field input[type=text]:focus + label {
+	color: #fff !important;
+}
+
+.input-field label {
+	color: #fff !important;
+}
+
+.input-field .prefix.active {
+	color: #fff;
+}

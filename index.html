@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Title -->
+	<title>AJAX tool</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<!-- Materialize -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<!-- Prism -->
+	<script src="js/prism.js"></script>
+	<link rel="stylesheet" href="css/prism.css">
+
+	<!-- Material icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Main script -->
+	<script src="js/main.js"></script>
+
+	<!-- Main stylesheet -->
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="grey darken-4 white-text">
+	<div class="container">
+		<h3>
+			<i class="material-icons small">code</i> 
+			AJAX tool
+		</h3>
+
+		<div class="card-panel grey darken-2">
+			<!-- Form -->
+			<form onsubmit="return false">
+				<div class="row">
+					<!-- Request type -->
+					<div class="input-field col s2">
+						<select id="fieldMethod">
+							<option>POST</option>
+							<option>GET</option>
+						</select>
+					</div>
+
+					<!-- Request URL -->
+					<div class="input-field col s10">
+						<input type="text" id="fieldURL">
+						<label for="fieldURL">URL</label>
+					</div>
+				</div>
+
+				<!-- Data -->
+				<div class="card-panel grey darken-1">
+					<h5>Parameters</h5>
+
+					<div id="fieldDataHolder"></div>
+
+					<button id="fieldAddData" class="btn grey waves-effect waves-light">
+						<i class="material-icons">add</i>
+					</button>
+
+					<button id="fieldDelAllData" class="btn red darken-2 waves-effect waves-light">
+						<i class="material-icons tiny">delete</i>
+					</button>
+				</div>
+
+				<!-- Go button -->
+				<div class="row">
+					<div class="col s12 input-field">
+						<button id="fieldGo" class="btn green waves-effect waves-light">
+							<i class="material-icons">send</i>
+							Go
+						</button>
+					</div>
+				</div>
+			</form>
+
+			<div class="input-field"></div>
+
+			<!-- Result -->
+			<div class="card-panel grey darken-1" id="resultCard">
+				<h4>
+					<i class="material-icons small">check</i> 
+					Result
+					
+					<span id="statusBadgeHolder"></span>
+				</h4>
+
+				<pre class="grey darken-4"><code id="jsonResult"></code></pre>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
